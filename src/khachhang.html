@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý khách hàng</title>
+    <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+
+<body>
+<div class="container">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li class="active"><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main customer-page">
+
+        <div class="header">
+            <h1>QUẢN LÝ KHÁCH HÀNG</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="customer-action-row">
+            <input id="searchCustomer" class="customer-search" type="text" placeholder="🔍 Tìm kiếm khách hàng...">
+            <button class="customer-add-btn" onclick="themKhachHang()">+ Thêm khách hàng</button>
+        </div>
+
+        <div class="customer-content">
+
+            <div class="customer-box">
+                <h2>Danh sách khách hàng</h2>
+
+                <table id="bangKhachHang" class="customer-table">
+                    <tr>
+                        <th>Mã KH</th>
+                        <th>Tên khách hàng</th>
+                        <th>SĐT</th>
+                        <th>Địa chỉ</th>
+                        <th>Sửa</th>
+                        <th>Xóa</th>
+                    </tr>
+
+                    <tr>
+                        <td>KH01</td>
+                        <td>Bảo Trâm</td>
+                        <td>0912345678</td>
+                        <td>Trà Vinh</td>
+                        <td><span class="action-text" onclick="suaKhachHang(this)">Sửa</span></td>
+                        <td><span class="action-text" onclick="xoaKhachHang(this)">Xóa</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>KH02</td>
+                        <td>Thanh Phúc</td>
+                        <td>0987654321</td>
+                        <td>Vĩnh Long</td>
+                        <td><span class="action-text" onclick="suaKhachHang(this)">Sửa</span></td>
+                        <td><span class="action-text" onclick="xoaKhachHang(this)">Xóa</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>KH03</td>
+                        <td>Hoàng Mãi</td>
+                        <td>0909111222</td>
+                        <td>Bến Tre</td>
+                        <td><span class="action-text" onclick="suaKhachHang(this)">Sửa</span></td>
+                        <td><span class="action-text" onclick="xoaKhachHang(this)">Xóa</span></td>
+                    </tr>
+                </table>
+
+                <div id="tongKhachHang" class="customer-total">
+                    Tổng khách hàng: 3
+                </div>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+
+    </div>
+</div>
+
+<script src="js/script.js?v=20"></script>
+</body>
+</html>

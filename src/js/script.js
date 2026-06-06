@@ -1,3 +1,4 @@
+console.log("script da chay");
 function themSanPham() {
     const bang = document.getElementById("bangSanPham");
     if (!bang) {
@@ -228,3 +229,86 @@ function suaSanPham(button) {
         alert("Đã cập nhật!");
     }
 }
+function capNhatTongKhachHang() {
+    const bang = document.getElementById("bangKhachHang");
+    const tong = document.getElementById("tongKhachHang");
+
+    if (!bang || !tong) return;
+
+    tong.innerText = "Tổng khách hàng: " + (bang.rows.length - 1);
+}
+
+function themKhachHang() {
+    const bang = document.getElementById("bangKhachHang");
+
+    const ma = prompt("Nhập mã khách hàng:");
+    const ten = prompt("Nhập tên khách hàng:");
+    const sdt = prompt("Nhập số điện thoại:");
+    const diaChi = prompt("Nhập địa chỉ:");
+
+    if (!ma || !ten || !sdt || !diaChi) {
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+
+    const row = bang.insertRow(-1);
+
+    row.innerHTML = `
+        <td>${ma}</td>
+        <td>${ten}</td>
+        <td>${sdt}</td>
+        <td>${diaChi}</td>
+        <td><span class="action-text" onclick="suaKhachHang(this)">Sửa</span></td>
+        <td><span class="action-text" onclick="xoaKhachHang(this)">Xóa</span></td>
+    `;
+
+    capNhatTongKhachHang();
+}
+
+function suaKhachHang(button) {
+    const row = button.closest("tr");
+    const cells = row.getElementsByTagName("td");
+
+    const ten = prompt("Sửa tên khách hàng:", cells[1].innerText);
+    const sdt = prompt("Sửa số điện thoại:", cells[2].innerText);
+    const diaChi = prompt("Sửa địa chỉ:", cells[3].innerText);
+
+    if (!ten || !sdt || !diaChi) {
+        alert("Không được để trống thông tin!");
+        return;
+    }
+
+    cells[1].innerText = ten;
+    cells[2].innerText = sdt;
+    cells[3].innerText = diaChi;
+}
+
+function xoaKhachHang(button) {
+    const xacNhan = confirm("Bạn có chắc muốn xóa khách hàng này không?");
+
+    if (xacNhan) {
+        button.closest("tr").remove();
+        capNhatTongKhachHang();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchCustomer = document.getElementById("searchCustomer");
+
+    if (searchCustomer) {
+        searchCustomer.addEventListener("keyup", function () {
+            const keyword = this.value.toLowerCase();
+            const rows = document.querySelectorAll("#bangKhachHang tr");
+
+            rows.forEach((row, index) => {
+                if (index === 0) return;
+
+                const text = row.innerText.toLowerCase();
+
+                row.style.display = text.includes(keyword) ? "" : "none";
+            });
+        });
+    }
+
+    capNhatTongKhachHang();
+});
