@@ -2,8 +2,9 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý sản phẩm</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 
 <body>
@@ -23,64 +24,88 @@
         </ul>
     </div>
 
-    <div class="main">
+    <div class="main product-page">
 
         <div class="header">
             <h1>QUẢN LÝ SẢN PHẨM</h1>
             <h2>👤 Admin</h2>
         </div>
 
-        <br>
+        <div class="product-action-row">
+            <input id="searchInput" class="product-search" type="text" placeholder="🔍 Tìm kiếm sản phẩm...">
+            <a href="themsanpham.html" class="product-add-btn">+ Thêm sản phẩm</a>
+        </div>
 
-        <input type="text" placeholder="🔍 Tìm kiếm sản phẩm...">
+        <div class="product-box">
+            <h2>Danh sách sản phẩm</h2>
 
-        <button>+ Thêm sản phẩm</button>
-        <div class="table-box">
+            <table id="bangSanPham" class="product-table">
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại</th>
+                    <th>Giá bán</th>
+                    <th>Tồn kho</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+                </tr>
 
-    <h2>Danh sách sản phẩm</h2>
+                <tr>
+                    <td>SP01</td>
+                    <td>Mì Hảo Hảo</td>
+                    <td>Mì</td>
+                    <td>4.000đ</td>
+                    <td>150</td>
+                    <td>
+                        <button onclick="suaSanPham(this)">
+                            Sửa
+                        </button>
+                    </td>
 
-    <table>
-        <tr>
-            <th>Mã SP</th>
-            <th>Tên sản phẩm</th>
-            <th>Giá bán</th>
-            <th>Tồn kho</th>
-            <th>Sửa</th>
-            <th>Xóa</th>
-        </tr>
+                    <td>
+                        <button onclick="xoaSanPham(this)">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
 
-        <tr>
-            <td>SP01</td>
-            <td>Mì Hảo Hảo</td>
-            <td>4.000đ</td>
-            <td>150</td>
-            <td>Sửa</td>
-            <td>Xóa</td>
-        </tr>
+                <tr>
+                    <td>SP02</td>
+                    <td>Coca Cola</td>
+                    <td>Nước</td>
+                    <td>12.000đ</td>
+                    <td>80</td>
+                    <td><span class="action-text" onclick="suaSanPham(this)">Sửa</span></td>
+                    <td><span class="action-text" onclick="xoaSanPham(this)">Xóa</span></td>
+                </tr>
 
-        <tr>
-            <td>SP02</td>
-            <td>Coca Cola</td>
-            <td>12.000đ</td>
-            <td>80</td>
-            <td>Sửa</td>
-            <td>Xóa</td>
-        </tr>
+                <tr>
+                    <td>SP03</td>
+                    <td>Oreo</td>
+                    <td>Bánh</td>
+                    <td>10.000đ</td>
+                    <td>60</td>
+                    <td><span class="action-text" onclick="suaSanPham(this)">Sửa</span></td>
+                    <td><span class="action-text" onclick="xoaSanPham(this)">Xóa</span></td>
+                </tr>
 
-        <tr>
-            <td>SP03</td>
-            <td>Bánh Oreo</td>
-            <td>10.000đ</td>
-            <td>60</td>
-            <td>Sửa</td>
-            <td>Xóa</td>
-        </tr>
-    </table>
+                <tr>
+                    <td>SP04</td>
+                    <td>Nước Suối</td>
+                    <td>Nước</td>
+                    <td>5.000đ</td>
+                    <td>100</td>
+                    <td><span class="action-text" onclick="suaSanPham(this)">Sửa</span></td>
+                    <td><span class="action-text" onclick="xoaSanPham(this)">Xóa</span></td>
+                </tr>
+            </table>
+        </div>
 
-</div>
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
 
     </div>
-
 </div>
+
+<script src="js/script.js?v=8"></script>
 </body>
 </html>

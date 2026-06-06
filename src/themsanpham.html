@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css?v=13">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li class="active"><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main add-product-page">
+        <div class="header">
+            <h1>THÊM SẢN PHẨM</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="back-row">
+            <a href="sanpham.html">← Quay lại danh sách sản phẩm</a>
+        </div>
+
+        <div class="form-box">
+            <div class="form-left">
+                <label>Tên sản phẩm *</label>
+                <input id="tenSP" type="text" placeholder="Nhập tên sản phẩm">
+
+                <label>Loại sản phẩm *</label>
+                <input id="loaiSP" type="text" placeholder="Chọn loại sản phẩm">
+
+                <label>Giá bán *</label>
+                <input id="giaSP" type="text" placeholder="Nhập giá bán">
+
+                <label>Số lượng *</label>
+                <input id="soLuongSP" type="text" placeholder="Nhập số lượng">
+            </div>
+
+            <div class="form-right">
+                <label>Ảnh sản phẩm</label>
+
+                <input
+                    id="anhSP"
+                    type="file"
+                    accept="image/*"
+                    onchange="xemTruocAnh(event)"
+                >
+
+                <label>Mô tả</label>
+                <textarea id="moTaSP" placeholder="Nhập mô tả sản phẩm"></textarea>
+
+                <label>Trạng thái</label>
+                <select id="trangThaiSP" onchange="capNhatTrangThai()">
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Tạm ngưng">Tạm ngưng</option>
+                    <option value="Hết hàng">Hết hàng</option>
+                </select>
+
+                <div class="note-row">
+                    <label>Ghi chú</label>
+                    <input id="ghiChuSP" type="text" readonly value="(*) Thông tin bắt buộc nhập">
+                </div>
+            </div>
+
+            <div class="preview-box" onclick="moAnhLon()">
+                <img id="previewImage" src="" style="width:100%; height:100%; object-fit:cover; display:none;">
+                <span id="previewText">Xem trước<br>ảnh</span>
+            </div>
+
+            <div id="imageModal" class="image-modal">
+                <span class="close-modal" onclick="dongAnhLon()">×</span>
+                <img id="modalImage" class="modal-image">
+            </div>
+
+            <div class="form-buttons">
+                <button class="save-btn" onclick="luuSanPham()">Lưu</button>
+                <button class="cancel-btn" onclick="huySanPham()">Hủy</button>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+
+<script src="js/script.js?v=13"></script>
+</body>
+</html>
