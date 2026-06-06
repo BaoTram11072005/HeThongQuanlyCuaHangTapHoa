@@ -143,3 +143,29 @@ footer {
     color: #94a3b8;
     font-size: 12px;
 }
+.sidebar ul li a,
+.sidebar ul li a:visited,
+.sidebar ul li a:hover,
+.sidebar ul li a:active {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li.active a:visited,
+.sidebar ul li.active a:hover,
+.sidebar ul li.active a:active {
+    color: black;
+    text-decoration: none;
+}
+.sidebar li a {
+    color: white !important;
+    text-decoration: none !important;
+    display: block;
+}
+
+.sidebar li.active a {
+    color: black !important;
+    text-decoration: none !important;
+}
