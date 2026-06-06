@@ -169,3 +169,12 @@ footer {
     color: black !important;
     text-decoration: none !important;
 }
+.sidebar a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar li.active a{
+    color: black;
+}
