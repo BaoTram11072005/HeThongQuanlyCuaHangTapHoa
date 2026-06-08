@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm nhà cung cấp</title>
+    <link rel="stylesheet" href="css/style.css?v=700">
+</head>
+
+<body>
+<div class="container">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li class="active"><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main add-supplier-page">
+
+        <div class="header">
+            <h1>THÊM NHÀ CUNG CẤP</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <a href="nhacungcap.html" class="supplier-back-btn">
+            ← Quay lại danh sách nhà cung cấp
+        </a>
+
+        <div class="supplier-form-box">
+
+            <div class="supplier-form-grid">
+
+                <div>
+                    <label>Tên nhà cung cấp *</label>
+                    <input type="text" id="tenNCC" placeholder="Nhập tên nhà cung cấp">
+
+                    <label>Số điện thoại *</label>
+                    <input type="text" id="sdtNCC" placeholder="Nhập số điện thoại">
+
+                    <label>Email *</label>
+                    <input type="email" id="emailNCC" placeholder="Nhập email">
+
+                    <label>Địa chỉ *</label>
+                    <input type="text" id="diaChiNCC" placeholder="Nhập địa chỉ">
+                </div>
+
+                <div>
+                    <label>Logo nhà cung cấp</label>
+                    <input type="file" id="logoNCC" accept="image/*" onchange="xemTruocAnh(event)">
+
+                    <label>Trạng thái</label>
+                    <select id="trangThaiNCC">
+                        <option>Hoạt động</option>
+                        <option>Ngừng hoạt động</option>
+                    </select>
+
+                    <label>Người đại diện</label>
+                    <input type="text" id="nguoiDaiDien" placeholder="Nhập tên người đại diện">
+
+                    <label>Ghi chú</label>
+                    <input type="text" id="ghiChuNCC" placeholder="Nhập ghi chú">
+                </div>
+
+                <div class="supplier-preview">
+                    <img id="previewImg" src="" alt="">
+                    <span id="previewText">Xem trước ảnh</span>
+                </div>
+
+            </div>
+
+            <div class="supplier-buttons">
+                <button class="supplier-save-btn" onclick="themNhaCungCap()">Lưu</button>
+                <button class="supplier-cancel-btn" onclick="huyThem()">Hủy</button>
+            </div>
+
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+
+    </div>
+</div>
+
+<script src="js/nhacungcap.js?v=1"></script>
+</body>
+</html>

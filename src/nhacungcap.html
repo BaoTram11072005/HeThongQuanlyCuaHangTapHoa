@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý nhà cung cấp</title>
+   <link rel="stylesheet" href="css/style.css?v=900">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li class="active"><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main supplier-page">
+
+        <div class="header">
+            <h1>QUẢN LÝ NHÀ CUNG CẤP</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="supplier-action-row">
+            <input
+                id="searchSupplier"
+                class="supplier-search"
+                type="text"
+                placeholder="🔍 Tìm kiếm nhà cung cấp..."
+                onkeyup="timKiemNhaCungCap()"
+            >
+
+            <a href="themnhacungcap.html" class="supplier-add-btn">
+                + Thêm nhà cung cấp
+            </a>
+        </div>
+
+        <div class="supplier-content">
+
+            <div class="supplier-box">
+
+                <h2>Danh sách nhà cung cấp</h2>
+
+                <table id="bangNhaCungCap" class="supplier-table">
+                </table>
+
+                <div id="tongNhaCungCap" class="supplier-total">
+                    Tổng nhà cung cấp: 0
+                </div>
+
+            </div>
+            <div class="supplier-summary">
+                <h2>🚚 Nhà cung cấp</h2>
+                <p>Tổng NCC</p>
+                <h3 id="tongNCCBox">2</h3>
+                <p>100%</p>
+                <p>Đang hoạt động</p>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 Hệ thống quản lý cửa hàng tạp hóa
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="js/nhacungcap.js?v=1"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof hienThiNhaCungCap === "function") {
+        hienThiNhaCungCap();
+    }
+});
+</script>
+
+</body>
+</html>

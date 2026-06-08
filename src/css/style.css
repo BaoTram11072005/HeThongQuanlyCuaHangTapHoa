@@ -1,4 +1,5 @@
-* {
+*
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -556,96 +557,330 @@ footer {
 }
 /* ===== TRANG QUẢN LÝ KHÁCH HÀNG ===== */
 
-.customer-action-row{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin:30px 0;
+.customer-page .customer-action-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 35px 0 28px;
 }
 
-.customer-search{
-    width:280px;
-    height:40px;
-    border:1px solid #d1d5db;
-    border-radius:6px;
-    padding-left:12px;
-    font-size:16px;
-    font-weight:bold;
+.customer-page .customer-search {
+    width: 330px;
+    height: 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
 }
 
-.customer-add-btn{
-    width:250px;
-    height:40px;
-    border:none;
-    border-radius:6px;
-    background:#14b8a6;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
+.customer-page a.customer-add-btn,
+.customer-page a.customer-add-btn:link,
+.customer-page a.customer-add-btn:visited,
+.customer-page a.customer-add-btn:hover,
+.customer-page a.customer-add-btn:active {
+    width: 260px;
+    height: 40px;
+    background: #14b8a6;
+    border-radius: 6px;
+    color: black !important;
+    text-decoration: none !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.customer-content{
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:25px;
+.customer-page .customer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
 }
 
-.customer-box{
-    width:640px;
-    background:white;
-    border:1px solid #cbd5e1;
-    border-radius:10px;
-    padding:20px;
-    box-shadow:0 2px 6px #00000010;
+.customer-page .customer-box {
+    width: 640px;
+    background: white;
+    padding: 24px 28px;
+    border-radius: 8px;
+    border: 1px solid #9ca3af;
+    box-shadow: 0 4px 10px #00000015;
 }
 
-.customer-box h2{
-    text-align:center;
-    margin-bottom:20px;
-    font-size:18px;
+.customer-page .customer-box h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
 }
 
-.customer-table{
-    width:100%;
-    border-collapse:collapse;
-    text-align:center;
-    font-size:14px;
+.customer-page .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 13px;
 }
 
-.customer-table th{
-    background:#e6f4f1;
-    padding:10px;
+.customer-page .customer-table th {
+    background: #e0f2f1;
+    padding: 10px 5px;
+    font-weight: bold;
 }
 
-.customer-table td{
-    padding:10px;
-    border-bottom:1px solid #e5e7eb;
+.customer-page .customer-table td {
+    padding: 9px 5px;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: bold;
 }
 
-.customer-stat{
-    width:120px;
-    background:#e6f4f1;
-    border:1px solid #bfd7d4;
-    border-radius:8px;
-    text-align:center;
-    padding:20px 10px;
+.customer-page .customer-total {
+    text-align: right;
+    margin-top: 12px;
+    color: #0f766e;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.customer-stat h3{
-    color:#15803d;
-    font-size:14px;
-    margin-bottom:20px;
+.customer-page .action-text {
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
 }
 
-.customer-stat p{
-    font-weight:bold;
-    margin-bottom:15px;
+.customer-page .action-text:hover {
+    color: #0f766e;
 }
 
-.customer-total{
-    text-align:right;
-    margin-top:15px;
-    color:#0f766e;
-    font-weight:bold;
+
+/* ===== TRANG NHÀ CUNG CẤP ===== */
+
+.supplier-page .supplier-action-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 35px 0 28px;
+}
+
+.supplier-page .supplier-search {
+    width: 330px;
+    height: 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+.supplier-page a.supplier-add-btn {
+    width: 270px;
+    height: 40px;
+    background: #14b8a6;
+    border-radius: 6px;
+    color: black !important;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.supplier-page .supplier-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.supplier-page .supplier-box {
+    width: 700px;
+    background: white;
+    padding: 24px 28px;
+    border-radius: 8px;
+    border: 1px solid #9ca3af;
+    box-shadow: 0 4px 10px #00000015;
+}
+
+.supplier-page .supplier-box h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.supplier-page .supplier-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 13px;
+}
+
+.supplier-page .supplier-table th {
+    background: #e0f2f1;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.supplier-page .supplier-table td {
+    padding: 9px 5px;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: bold;
+}
+
+.supplier-page .supplier-total {
+    text-align: right;
+    margin-top: 12px;
+    color: #0f766e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.supplier-page .action-text {
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.supplier-page .action-text:hover {
+    color: #0f766e;
+}
+
+/* ===== FORM THÊM NHÀ CUNG CẤP  */
+
+.add-supplier-page .supplier-back-btn {
+    float: right;
+    margin: 18px 75px 18px 0;
+    background: #0f766e;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 18px;
+}
+
+.add-supplier-page .supplier-form-box {
+    clear: both;
+    width: 760px;
+    min-height: 420px;
+    margin: 25px auto 0;
+    padding: 28px 45px 25px;
+    border: 1px solid #555;
+    border-radius: 12px;
+    background: white;
+}
+
+.add-supplier-page .supplier-form-grid {
+    display: grid;
+    grid-template-columns: 300px 165px 110px;
+    column-gap: 50px;
+    align-items: start;
+}
+
+.add-supplier-page .supplier-form-box label {
+    display: block;
+    color: #00796b;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0 8px;
+}
+
+.add-supplier-page .supplier-form-box input,
+.add-supplier-page .supplier-form-box select {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #4b5563;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 14px;
+}
+
+.add-supplier-page .supplier-form-box input[type="file"] {
+    font-size: 13px;
+    padding: 2px;
+}
+
+.add-supplier-page .supplier-preview {
+    width: 110px;
+    height: 110px;
+    margin-top: 40px;
+    border: 1px solid #4b5563;
+    background: #effffb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #667085;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.add-supplier-page .supplier-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+.add-supplier-page .supplier-buttons {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.add-supplier-page .supplier-buttons button {
+    width: 105px;
+    height: 42px;
+    border: none;
+    border-radius: 7px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin: 0 16px;
+    cursor: pointer;
+}
+
+.add-supplier-page .supplier-save-btn {
+    background: #1bb8aa;
+}
+
+.add-supplier-page .supplier-cancel-btn {
+    background: #f44343;
+}
+/* ===== SỬA KHUNG THỐNG KÊ TRANG NHÀ CUNG CẤP ===== */
+
+.supplier-page .supplier-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.supplier-page .supplier-summary {
+    width: 190px;
+    height: 285px;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    background: #ecfff8;
+    text-align: center;
+    padding: 35px 10px 10px;
+    font-weight: bold;
+    color: #374151;
+}
+
+.supplier-page .supplier-summary h2 {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 28px;
+}
+
+.supplier-page .supplier-summary p,
+.supplier-page .supplier-summary h3 {
+    font-size: 20px;
+    margin: 8px 0;
 }

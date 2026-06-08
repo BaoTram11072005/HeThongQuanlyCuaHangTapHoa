@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm khách hàng</title>
+    <link rel="stylesheet" href="css/style.css?v=30">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li class="active"><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main add-customer-page">
+        <div class="header">
+            <h1>THÊM KHÁCH HÀNG</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="back-row">
+            <a href="khachhang.html">← Quay lại danh sách khách hàng</a>
+        </div>
+
+        <div class="form-box">
+            <div class="form-left">
+                <label>Tên khách hàng *</label>
+                <input id="tenKH" type="text" placeholder="Nhập tên khách hàng">
+
+                <label>Số điện thoại *</label>
+                <input id="sdtKH" type="text" placeholder="Nhập số điện thoại">
+
+                <label>Email *</label>
+                <input id="emailKH" type="email" placeholder="Nhập email">
+
+                <label>Địa chỉ *</label>
+                <input id="diaChiKH" type="text" placeholder="Nhập địa chỉ">
+            </div>
+
+            <div class="form-right">
+                <label>Ảnh khách hàng</label>
+                <input id="anhKH" type="file" accept="image/*" onchange="xemTruocAnhKH(event)">
+
+                <label>Ghi chú</label>
+                <textarea id="ghiChuKH" placeholder="Nhập ghi chú khách hàng"></textarea>
+
+                <label>Trạng thái</label>
+                <select id="trangThaiKH">
+                    <option value="Hoạt động">Hoạt động</option>
+                    <option value="Tạm khóa">Tạm khóa</option>
+                </select>
+            </div>
+
+            <div class="preview-box" onclick="moAnhLonKH()">
+                <img id="previewImgKH" src="" style="width:100%;height:100%;object-fit:cover;display:none;">
+                <span id="previewTextKH">Xem trước<br>ảnh</span>
+            </div>
+
+            <div class="form-buttons">
+                <button class="save-btn" onclick="luuKhachHang()">Lưu</button>
+                <button class="cancel-btn" onclick="huyKhachHang()">Hủy</button>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+
+<div id="imageModalKH" class="image-modal">
+    <span class="close-modal" onclick="dongAnhLonKH()">×</span>
+    <img id="modalImageKH" class="modal-image">
+</div>
+
+<script src="js/script.js?v=30"></script>
+</body>
+</html>
