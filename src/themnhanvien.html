@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm nhân viên</title>
+    <link rel="stylesheet" href="css/style.css?v=1001">
+</head>
+
+<body>
+<div class="container">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li class="active"><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main add-employee-page">
+
+        <div class="header">
+            <h1>THÊM NHÂN VIÊN</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <a href="nhanvien.html" class="employee-back-btn">
+            ← Quay lại danh sách nhân viên
+        </a>
+
+        <div class="employee-form-box">
+
+            <div class="employee-form-grid">
+
+                <div>
+                    <label>Họ và tên *</label>
+                    <input type="text" id="tenNV" placeholder="Nhập họ tên nhân viên">
+
+                    <label>Số điện thoại *</label>
+                    <input type="text" id="sdtNV" placeholder="Nhập số điện thoại">
+
+                    <label>Email *</label>
+                    <input type="email" id="emailNV" placeholder="Nhập email">
+
+                    <label>Địa chỉ *</label>
+                    <input type="text" id="diaChiNV" placeholder="Nhập địa chỉ">
+                </div>
+
+                <div>
+                    <label>Ảnh nhân viên</label>
+                    <input type="file" id="anhNV" accept="image/*" onchange="xemTruocAnhNhanVien(event)">
+
+                    <label>Chức vụ</label>
+                    <select id="chucVuNV">
+                        <option>Quản lý</option>
+                        <option>Thu ngân</option>
+                        <option>Bán hàng</option>
+                        <option>Kho hàng</option>
+                    </select>
+
+                    <label>Lương</label>
+                    <input type="text" id="luongNV" placeholder="Nhập số lương">
+
+                    <label>Ca làm việc</label>
+                    <select id="caLamNV">
+                        <option>Ca sáng</option>
+                        <option>Ca chiều</option>
+                        <option>Ca tối</option>
+                    </select>
+                </div>
+
+                <div class="employee-preview">
+                    <img id="previewEmployeeImg" src="" alt="">
+                    <span id="previewEmployeeText">Xem trước ảnh</span>
+                </div>
+
+            </div>
+
+            <div class="employee-buttons">
+                <button class="employee-save-btn" onclick="themNhanVien()">Lưu</button>
+                <button class="employee-cancel-btn" onclick="huyThemNhanVien()">Hủy</button>
+            </div>
+
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+
+    </div>
+</div>
+
+<script src="js/nhanvien.js?v=1"></script>
+</body>
+</html>

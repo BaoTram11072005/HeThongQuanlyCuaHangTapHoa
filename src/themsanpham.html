@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Thêm sản phẩm</title>
-    <link rel="stylesheet" href="css/style.css?v=13">
+    <link rel="stylesheet" href="css/style.css?v=100">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 <input id="tenSP" type="text" placeholder="Nhập tên sản phẩm">
 
                 <label>Loại sản phẩm *</label>
-                <input id="loaiSP" type="text" placeholder="Chọn loại sản phẩm">
+                <input id="loaiSP" type="text" placeholder="Nhập loại sản phẩm">
 
                 <label>Giá bán *</label>
                 <input id="giaSP" type="text" placeholder="Nhập giá bán">
@@ -49,19 +49,13 @@
 
             <div class="form-right">
                 <label>Ảnh sản phẩm</label>
-
-                <input
-                    id="anhSP"
-                    type="file"
-                    accept="image/*"
-                    onchange="xemTruocAnh(event)"
-                >
+                <input id="anhSP" type="file" accept="image/*" onchange="xemTruocAnhSanPham(event)">
 
                 <label>Mô tả</label>
                 <textarea id="moTaSP" placeholder="Nhập mô tả sản phẩm"></textarea>
 
                 <label>Trạng thái</label>
-                <select id="trangThaiSP" onchange="capNhatTrangThai()">
+                <select id="trangThaiSP">
                     <option value="Hoạt động">Hoạt động</option>
                     <option value="Tạm ngưng">Tạm ngưng</option>
                     <option value="Hết hàng">Hết hàng</option>
@@ -73,14 +67,9 @@
                 </div>
             </div>
 
-            <div class="preview-box" onclick="moAnhLon()">
-                <img id="previewImage" src="" style="width:100%; height:100%; object-fit:cover; display:none;">
-                <span id="previewText">Xem trước<br>ảnh</span>
-            </div>
-
-            <div id="imageModal" class="image-modal">
-                <span class="close-modal" onclick="dongAnhLon()">×</span>
-                <img id="modalImage" class="modal-image">
+            <div class="preview-box">
+                <img id="previewSanPhamImg" src="" alt="">
+                <span id="previewSanPhamText">Xem trước<br>ảnh</span>
             </div>
 
             <div class="form-buttons">
@@ -93,6 +82,6 @@
     </div>
 </div>
 
-<script src="js/script.js?v=13"></script>
+<script src="js/script.js?v=100"></script>
 </body>
 </html>

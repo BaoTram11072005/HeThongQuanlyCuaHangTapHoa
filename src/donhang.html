@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="css/style.css?v=500">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li class="active"><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main order-page">
+        <div class="header">
+            <h1>QUẢN LÝ ĐƠN HÀNG</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="order-action-row">
+            <input id="searchOrder" class="order-search" type="text"
+                   placeholder="🔍 Tìm kiếm đơn hàng..."
+                   onkeyup="timKiemDonHang()">
+
+            <a href="taodonhang.html" class="order-add-btn">+ Tạo đơn hàng</a>
+        </div>
+
+        <div class="order-content">
+            <div class="order-box">
+                <h2>Danh sách đơn hàng</h2>
+
+                <table id="bangDonHang" class="order-table"></table>
+
+                <div class="order-total-wrap">
+                    <p id="tongDonHang">Tổng đơn hàng: 0</p>
+                    <p id="tongDoanhThu">Tổng doanh thu: 0đ</p>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>📋 Đơn hàng</h2>
+                <p id="tongDonBox">Tổng đơn: 0</p>
+                <p id="hoanThanhBox">🟢 Hoàn thành: 0</p>
+                <p id="dangGiaoBox">🟠 Đang giao: 0</p>
+                <p id="choXuLyBox">🔴 Chờ xử lý: 0</p>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+<div id="orderDetailModal" class="order-detail-modal">
+    <div class="order-detail-box">
+        <h2>📋 CHI TIẾT ĐƠN HÀNG</h2>
+
+        <div class="detail-line"></div>
+
+        <div class="order-info">
+            <p><b>Mã đơn hàng:</b> <span id="ctMaDH"></span></p>
+            <p><b>Khách hàng:</b> <span id="ctKhachHang"></span></p>
+            <p><b>Số điện thoại:</b> <span id="ctSdt"></span></p>
+            <p><b>Ngày đặt:</b> <span id="ctNgay"></span></p>
+        </div>
+
+        <div class="detail-line"></div>
+
+        <h3>Danh sách sản phẩm</h3>
+
+        <table class="detail-product-table">
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+            </tr>
+            <tr>
+                <td id="ctSanPham"></td>
+                <td id="ctSoLuong"></td>
+                <td id="ctDonGia"></td>
+            </tr>
+        </table>
+
+        <div class="detail-line"></div>
+
+        <div class="total-status-box">
+            <p><b>Tổng tiền:</b> <span id="ctTongTien"></span></p>
+            <p><b>Trạng thái:</b> <span id="ctTrangThai"></span></p>
+        </div>
+
+        <button class="detail-close-btn" onclick="dongChiTietDonHang()">Đóng</button>
+    </div>
+</div>
+<script src="js/donhang.js?v=500"></script>
+</body>
+</html>

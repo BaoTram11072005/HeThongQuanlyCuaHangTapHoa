@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" href="css/style.css?v=1001">
+</head>
+
+<body>
+<div class="container">
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li class="active"><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main employee-page">
+
+        <div class="header">
+            <h1>QUẢN LÝ NHÂN VIÊN</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="employee-action-row">
+            <input id="searchEmployee" class="employee-search" type="text"
+                   placeholder="🔍 Tìm kiếm nhân viên..."
+                   onkeyup="timKiemNhanVien()">
+
+            <a href="themnhanvien.html" class="employee-add-btn">+ Thêm nhân viên</a>
+        </div>
+
+        <div class="employee-content">
+            <div class="employee-box">
+                <h2>Danh sách nhân viên</h2>
+
+                <table id="bangNhanVien" class="employee-table"></table>
+
+                <div id="tongNhanVien" class="employee-total">
+                    Tổng nhân viên: 3
+                </div>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+
+    </div>
+</div>
+
+<script src="js/nhanvien.js?v=1"></script>
+</body>
+</html>

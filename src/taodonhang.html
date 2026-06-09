@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm đơn hàng</title>
+    <link rel="stylesheet" href="css/style.css?v=300">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li class="active"><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main add-order-page">
+        <div class="header">
+            <h1>THÊM ĐƠN HÀNG</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="back-row">
+            <a href="donhang.html">← Quay lại danh sách đơn hàng</a>
+        </div>
+
+        <div class="form-box">
+            <div class="form-left">
+                <label>Tên khách hàng *</label>
+                <select id="tenKHDonHang">
+                    <option value="">Chọn khách hàng</option>
+                    <option>Bảo Trâm</option>
+                    <option>Thanh Phúc</option>
+                    <option>Hoàng Mãi</option>
+                </select>
+
+                <label>Số điện thoại *</label>
+                <input id="sdtDH" type="text" placeholder="Nhập số điện thoại">
+
+                <label>Địa chỉ giao hàng *</label>
+                <input id="diaChiDH" type="text" placeholder="Nhập địa chỉ">
+
+                <label>Ngày đặt hàng *</label>
+                <input id="ngayDH" type="date">
+            </div>
+
+            <div class="form-right">
+                <label>Sản phẩm *</label>
+                <select id="sanPhamDH">
+                    <option value="">Chọn sản phẩm</option>
+                    <option>Sữa Vinamilk</option>
+                    <option>Nước Coca Cola</option>
+                    <option>Mì Acecook</option>
+                    <option>Nước mắm Masan</option>
+                </select>
+
+                <label>Số lượng *</label>
+                <input id="soLuongDH" type="number" placeholder="Nhập số lượng">
+
+                <label>Tổng tiền</label>
+                <input id="tongTienDH" type="text" placeholder="Nhập tổng tiền">
+
+                <label>Trạng thái</label>
+                <select id="trangThaiDH">
+                    <option>Chờ xử lý</option>
+                    <option>Đang giao</option>
+                    <option>Đã giao</option>
+                    <option>Đã hủy</option>
+                </select>
+            </div>
+
+            <div class="form-buttons">
+                <button class="save-btn" onclick="luuDonHang()">Lưu</button>
+                <button class="cancel-btn" onclick="huyDonHang()">Hủy</button>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+
+<script src="js/donhang.js?v=1"></script>
+</body>
+</html>

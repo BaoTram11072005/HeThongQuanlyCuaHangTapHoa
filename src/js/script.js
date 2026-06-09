@@ -133,39 +133,47 @@ function huySanPham() {
         window.location.href = "sanpham.html";
     }
 }
-function xemTruocAnh(event){
+function xemTruocAnh(event) {
     const file = event.target.files[0];
 
-    if(file){
-        const reader = new FileReader();
+    if (!file) {
+        return;
+    }
 
-        reader.onload = function(e){
+    const reader = new FileReader();
 
-            document.getElementById("previewImage").src = e.target.result;
-            document.getElementById("previewImage").style.display = "block";
+    reader.onload = function(e) {
+        const previewBox = document.querySelector(".preview-box");
+        const modalImage = document.getElementById("modalImage");
 
-            document.getElementById("previewText").style.display = "none";
+        previewBox.innerHTML = `
+            <img 
+                src="${e.target.result}" 
+                style="width:100%; height:100%; object-fit:cover; display:block;"
+            >
+        `;
 
-            document.getElementById("modalImage").src = e.target.result;
+        if (modalImage) {
+            modalImage.src = e.target.result;
         }
+    };
 
-        reader.readAsDataURL(file);
+    reader.readAsDataURL(file);
+}
+
+function moAnhLon() {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    if (!modalImage.src) {
+        alert("Bạn chưa chọn ảnh!");
+        return;
     }
-}
-function capNhatTrangThai() {
-    const trangThai = document.getElementById("trangThaiSP").value;
-    document.getElementById("ghiChuSP").value = "Trạng thái: " + trangThai;
-}
-function moAnhLon(){
 
-    const img = document.getElementById("previewImage");
-
-    if(img.src){
-        document.getElementById("imageModal").style.display = "flex";
-    }
+    modal.style.display = "flex";
 }
 
-function dongAnhLon(){
+function dongAnhLon() {
     document.getElementById("imageModal").style.display = "none";
 }
 document.addEventListener("DOMContentLoaded", function () {
@@ -228,6 +236,17 @@ function suaSanPham(button) {
 
         alert("Đã cập nhật!");
     }
+}
+function xemTruocAnhSanPham(event) {
+    const file = event.target.files[0];
+    const img = document.getElementById("previewSanPhamImg");
+    const text = document.getElementById("previewSanPhamText");
+
+    if (!file) return;
+
+    img.src = URL.createObjectURL(file);
+    img.style.display = "block";
+    text.style.display = "none";
 }
 /* ===== TRANG QUẢN LÝ KHÁCH HÀNG ===== */
 
@@ -403,6 +422,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+function xemTruocAnhKH(event) {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const img = document.getElementById("previewImgKH");
+    const text = document.getElementById("previewTextKH");
+    const modalImg = document.getElementById("modalImageKH");
+
+    img.src = URL.createObjectURL(file);
+    img.style.display = "block";
+    text.style.display = "none";
+
+    if (modalImg) {
+        modalImg.src = img.src;
+    }
+}
+
+function moAnhLonKH() {
+    const modal = document.getElementById("imageModalKH");
+    const modalImg = document.getElementById("modalImageKH");
+
+    if (!modalImg || !modalImg.src) {
+        alert("Bạn chưa chọn ảnh!");
+        return;
+    }
+
+    modal.style.display = "flex";
+}
+
+function dongAnhLonKH() {
+    document.getElementById("imageModalKH").style.display = "none";
+}
+
 /* Nhà cung cấp */
 
 function layDanhSachNhaCungCap() {
