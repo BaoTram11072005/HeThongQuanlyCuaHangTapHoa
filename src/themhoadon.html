@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm hóa đơn</title>
+    <link rel="stylesheet" href="css/style.css?v=500">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li class="active"><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main add-invoice-page">
+        <div class="add-invoice-header">
+            <h1>THÊM HÓA ĐƠN</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <a href="hoadon.html" class="add-invoice-back">
+            ← Quay lại danh sách hóa đơn
+        </a>
+
+        <div class="add-invoice-box">
+            <div class="add-invoice-grid">
+                <div class="add-invoice-group">
+                    <label>Mã hóa đơn *</label>
+                    <input id="maHD" type="text" placeholder="Nhập mã hóa đơn">
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Tổng tiền *</label>
+                    <input id="tongTien" type="number" placeholder="Nhập số tiền">
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Khách hàng *</label>
+                    <select id="khachHang">
+                        <option value="">Chọn tên khách hàng▼</option>
+                        <option>Bảo Trâm</option>
+                        <option>Thanh Phúc</option>
+                        <option>Hoàng Mãi</option>
+                    </select>
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Phương thức TT *</label>
+                    <select id="phuongThuc">
+                        <option>Tiền mặt</option>
+                        <option>Chuyển khoản</option>
+                    </select>
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Địa chỉ giao hàng *</label>
+                    <input id="diaChi" type="text" placeholder="Nhập địa chỉ">
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Trạng thái *</label>
+                    <select id="trangThai">
+                        <option>Chờ xử lý▼</option>
+                        <option>Đã thanh toán</option>
+                        <option>Chưa thanh toán</option>
+                    </select>
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Ngày lập *</label>
+                    <input id="ngayLap" type="date">
+                </div>
+
+                <div class="add-invoice-group">
+                    <label>Ghi chú</label>
+                    <input id="ghiChu" type="text" placeholder="(*) Thông tin bắt buộc nhập">
+                </div>
+            </div>
+
+            <div class="add-invoice-buttons">
+                <button class="add-invoice-save" onclick="luuHoaDon()">Lưu</button>
+                <button class="add-invoice-cancel" onclick="window.location.href='hoadon.html'">Hủy</button>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+
+<script src="js/themhoadon.js?v=500"></script>
+</body>
+</html>

@@ -1334,3 +1334,453 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* ===== QUẢN LÝ HÓA ĐƠN - GIỐNG FIGMA ===== */
+
+body.invoice-page{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f3f4f6;
+    overflow-x:hidden;
+}
+
+/* SIDEBAR */
+.invoice-page .sidebar{
+    width:140px;
+    height:100vh;
+    background:#8fcac5;
+    position:fixed;
+    left:0;
+    top:0;
+    padding-top:50px;
+    box-sizing:border-box;
+}
+
+.invoice-page .sidebar a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    padding:10px 12px;
+}
+
+.invoice-page .sidebar a.active{
+    background:#b6ddd9;
+    color:#000;
+    border-radius:8px;
+    margin:0 8px;
+}
+
+/* MAIN */
+.invoice-page .main-content{
+    margin-left:140px;
+    padding:20px;
+    min-height:100vh;
+    position:relative;
+}
+
+/* ADMIN */
+.invoice-page .top-admin{
+    position:absolute;
+    top:15px;
+    right:35px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* TIÊU ĐỀ */
+.invoice-page h1{
+    text-align:center;
+    color:#0f766e;
+    font-size:22px;
+    margin:0 0 45px;
+}
+
+/* SEARCH + BUTTON */
+.invoice-page .invoice-action-row{
+    display:flex;
+    gap:22px;
+    margin-left:6px;
+    margin-bottom:30px;
+}
+
+.invoice-page .invoice-action-row input{
+    width:215px;
+    height:32px;
+    border:1px solid #d1d5db;
+    border-radius:5px;
+    padding-left:12px;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.invoice-page .invoice-action-row button{
+    width:180px;
+    height:32px;
+    border:none;
+    border-radius:5px;
+    background:#20b8ad;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* KHUNG CHÍNH */
+.invoice-page .invoice-layout{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+}
+
+/* BẢNG */
+.invoice-page .invoice-table-box{
+    width:455px;
+    min-height:195px;
+    background:#fff;
+    border:1px solid #6b7280;
+    border-radius:8px;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+.invoice-page .invoice-table-box h3{
+    text-align:center;
+    margin:0 0 10px;
+    font-size:15px;
+}
+
+.invoice-page .invoice-table-box table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:center;
+    font-size:10px;
+}
+
+.invoice-page .invoice-table-box th{
+    background:#dcefed;
+    border:1px solid #9ca3af;
+    padding:6px 4px;
+}
+
+.invoice-page .invoice-table-box td{
+    border-bottom:1px solid #e5e7eb;
+    padding:7px 4px;
+    font-weight:bold;
+}
+
+/* MÀU THANH TOÁN */
+.invoice-page .status-paid{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.invoice-page .status-unpaid{
+    color:#ef4444;
+    font-weight:bold;
+}
+
+/* ICON */
+.invoice-page .icon-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* TỔNG */
+.invoice-page .invoice-total{
+    text-align:right;
+    color:#0f766e;
+    font-size:11px;
+    font-weight:bold;
+    margin-top:12px;
+}
+
+.invoice-page .invoice-total p{
+    margin:4px 0;
+}
+
+/* BOX THỐNG KÊ */
+.invoice-page .invoice-summary{
+    width:155px;
+    min-height:195px;
+    background:#eefcf7;
+    border:1px solid #9ca3af;
+    border-radius:8px;
+    padding:12px;
+    text-align:center;
+    box-sizing:border-box;
+}
+
+.invoice-page .invoice-summary h2{
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.invoice-page .invoice-summary p{
+    margin:12px 0;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.invoice-page .paid{
+    color:#16a34a;
+}
+
+.invoice-page .unpaid{
+    color:#ef4444;
+}
+
+.invoice-page #doanhThuBox{
+    font-size:18px;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.invoice-page .footer{
+    position:absolute;
+    right:25px;
+    bottom:12px;
+    font-size:10px;
+    color:#9ca3af;
+}
+/* ===== CĂN GIỮA TIÊU ĐỀ HÓA ĐƠN ===== */
+
+.invoice-page .header {
+    position: relative;
+}
+
+.invoice-page .invoice-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.invoice-page .invoice-title h1 {
+    margin: 0;
+    text-align: center;
+    color: #0f766e;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.invoice-page .header h2 {
+    margin-left: auto;
+}
+/* ===== THÊM HÓA ĐƠN - GIỐNG TẠO ĐƠN HÀNG ===== */
+
+.add-invoice-page{
+    min-height:100vh;
+}
+
+/* HEADER */
+.add-invoice-header{
+    position:relative;
+    height:90px;
+}
+
+.add-invoice-header h1{
+    text-align:center;
+    color:#0f766e;
+    font-size:32px;
+    font-weight:bold;
+    margin:20px 0 0;
+}
+
+.add-invoice-header h2{
+    position:absolute;
+    top:10px;
+    right:35px;
+    font-size:18px;
+    color:#374151;
+}
+
+/* NÚT QUAY LẠI */
+.add-invoice-back{
+    display:block;
+    width:420px;
+    height:42px;
+    line-height:42px;
+    background:#0f766e;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    margin:0 35px 25px auto;
+}
+
+/* KHUNG FORM */
+.add-invoice-box{
+    width:760px;
+    min-height:420px;
+    background:white;
+    border:1px solid #6b7280;
+    border-radius:12px;
+    margin:0 auto;
+    padding:30px 35px;
+    box-sizing:border-box;
+}
+
+/* GRID */
+.add-invoice-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:55px;
+    row-gap:20px;
+}
+
+/* GROUP */
+.add-invoice-group{
+    text-align:center;
+}
+
+.add-invoice-group label{
+    display:block;
+    color:#0f766e;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+/* INPUT */
+.add-invoice-group input,
+.add-invoice-group select{
+    width:250px;
+    height:32px;
+    border:1px solid #6b7280;
+    border-radius:6px;
+    text-align:center;
+    font-size:15px;
+    color:#6b7280;
+    background:white;
+}
+
+/* BUTTONS */
+.add-invoice-buttons{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    margin-top:25px;
+}
+
+.add-invoice-save,
+.add-invoice-cancel{
+    width:105px;
+    height:42px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.add-invoice-save{
+    background:#14b8a6;
+}
+
+.add-invoice-cancel{
+    background:#ef4444;
+}
+
+/* FOOTER */
+.add-invoice-page footer{
+    text-align:right;
+    color:#9ca3af;
+    font-size:12px;
+    margin:15px 35px 0 0;
+}
+/* THANH TRẮNG PHÍA TRÊN */
+
+.add-invoice-header{
+    background:#ffffff;
+    height:90px;
+    margin:0 30px 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.add-invoice-header h1{
+    margin:0;
+    color:#0f766e;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.add-invoice-header h2{
+    position:absolute;
+    right:30px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:18px;
+    color:#374151;
+}
+.order-detail-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.order-detail-box {
+    width: 430px;
+    background: white;
+    border-radius: 10px;
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.order-detail-box h2 {
+    color: #0f766e;
+}
+
+.detail-line {
+    border-top: 1px solid #d1d5db;
+    margin: 15px 0;
+}
+
+.order-info p,
+.total-status-box p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.detail-product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-product-table th {
+    background: #dcefed;
+}
+
+.detail-product-table td,
+.detail-product-table th {
+    padding: 8px;
+    font-weight: bold;
+}
+
+.total-status-box {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 12px 25px;
+}
+
+.detail-close-btn {
+    margin-top: 20px;
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -11,14 +11,14 @@ function layDanhSachDonHang() {
             ma: "DH002",
             khachHang: "Thanh Phúc",
             ngay: "11/06/2026",
-            tongTien: "120.000đ",
+            tongTien: "450.000đ",
             trangThai: "Đang giao"
         },
         {
             ma: "DH003",
             khachHang: "Hoàng Mãi",
             ngay: "11/06/2026",
-            tongTien: "450.000đ",
+            tongTien: "180.000đ",
             trangThai: "Chờ xử lý"
         }
     ];

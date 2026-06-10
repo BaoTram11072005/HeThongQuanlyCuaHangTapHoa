@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý hóa đơn</title>
+    <link rel="stylesheet" href="css/style.css?v=500">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li class="active"><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main order-page invoice-page">
+        <div class="header">
+            <div class="invoice-title">
+            <h1>QUẢN LÝ HÓA ĐƠN</h1>
+        </div>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="order-action-row">
+            <input id="searchHoaDon" class="order-search" type="text"
+                   placeholder="🔍 Tìm kiếm hóa đơn..."
+                   onkeyup="timKiemHoaDon()">
+
+            <a href="themhoadon.html" class="order-add-btn">+ Thêm hóa đơn</a>
+        </div>
+
+        <div class="order-content">
+            <div class="order-box">
+                <h2>Danh sách hóa đơn</h2>
+
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Mã HĐ</th>
+                            <th>Khách hàng</th>
+                            <th>Ngày lập</th>
+                            <th>Tổng tiền</th>
+                            <th>Thanh toán</th>
+                            <th>Xem</th>
+                            <th>In</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bangHoaDon"></tbody>
+                </table>
+
+                <div class="order-total-wrap">
+                    <p>Tổng hóa đơn: <span id="tongHoaDon">0</span></p>
+                    <p>Tổng doanh thu: <span id="tongDoanhThu">0đ</span></p>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>🧾 Hóa đơn</h2>
+                <p>Tổng HĐ: <span id="tongHDBox">0</span></p>
+                <p class="status-paid">🟢 Đã thanh toán: <span id="daThanhToan">0</span></p>
+                <p class="status-unpaid">🔴 Chưa thanh toán: <span id="chuaThanhToan">0</span></p>
+                <p>Doanh thu:</p>
+                <p><b id="doanhThuBox">0đ</b></p>
+            </div>
+        </div>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+<div id="hoaDonDetailModal" class="order-detail-modal">
+    <div class="order-detail-box">
+        <h2>🧾 CHI TIẾT HÓA ĐƠN</h2>
+
+        <div class="detail-line"></div>
+
+        <div class="order-info">
+            <p><b>Mã hóa đơn:</b> <span id="ctMaHD"></span></p>
+            <p><b>Khách hàng:</b> <span id="ctKhachHangHD"></span></p>
+            <p><b>Ngày lập:</b> <span id="ctNgayLapHD"></span></p>
+            <p><b>Thanh toán:</b> <span id="ctThanhToanHD"></span></p>
+        </div>
+
+        <div class="detail-line"></div>
+
+        <h3>Danh sách sản phẩm</h3>
+
+        <table class="detail-product-table">
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+            </tr>
+            <tr>
+                <td id="ctSanPhamHD">Sữa Vinamilk</td>
+                <td id="ctSoLuongHD">2</td>
+                <td id="ctDonGiaHD"></td>
+            </tr>
+        </table>
+
+        <div class="detail-line"></div>
+
+        <div class="total-status-box">
+            <p><b>Tổng tiền:</b> <span id="ctTongTienHD"></span></p>
+            <p><b>Thanh toán:</b> <span id="ctTrangThaiHD"></span></p>
+        </div>
+
+        <button class="detail-close-btn" onclick="dongChiTietHoaDon()">Đóng</button>
+    </div>
+</div>
+<script src="js/hoadon.js?v=500"></script>
+</body>
+</html>
