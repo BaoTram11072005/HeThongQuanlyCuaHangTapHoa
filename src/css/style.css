@@ -2034,3 +2034,67 @@ body.invoice-page{
     font-family: Arial, sans-serif;
     letter-spacing: 0;
 }
+
+
+.logout-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.logout-modal.show {
+    display: flex;
+}
+
+.logout-box {
+    width: 520px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    text-align: center;
+    padding: 25px 35px;
+    box-sizing: border-box;
+}
+
+.logout-box h2 {
+    color: #0f766e;
+    font-size: 30px;
+    margin: 0 0 20px;
+    font-weight: 800;
+}
+
+.logout-box p {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 45px;
+}
+
+.logout-actions {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.logout-actions button {
+    width: 150px;
+    height: 47px;
+    border: none;
+    font-size: 22px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #d1d5db;
+    color: #111;
+}
+
+.logout-btn {
+    background: #ef2b2b;
+    color: #fff;
+}

@@ -610,3 +610,25 @@ document.addEventListener("DOMContentLoaded", function () {
     hienThiNhaCungCap();
   }
 });
+function dangXuat() {
+    if (confirm("Bạn có muốn đăng xuất khỏi hệ thống không?")) {
+        localStorage.removeItem("isLogin");
+        localStorage.removeItem("username");
+        window.location.href = "login.html";
+    }
+}
+
+
+function moPopupDangXuat() {
+    document.getElementById("logoutModal").classList.add("show");
+}
+
+function dongPopupDangXuat() {
+    document.getElementById("logoutModal").classList.remove("show");
+}
+
+function xacNhanDangXuat() {
+    localStorage.removeItem("isLogin");
+    localStorage.removeItem("username");
+    window.location.href = "login.html";
+}
