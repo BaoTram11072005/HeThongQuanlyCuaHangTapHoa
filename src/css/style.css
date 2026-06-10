@@ -1784,3 +1784,253 @@ body.invoice-page{
     font-size: 18px;
     font-weight: bold;
 }
+
+/* ================================================= */
+/* ===== TRANG QUẢN LÝ THỐNG KÊ - BẢN ỔN ĐỊNH ===== */
+/* ================================================= */
+
+.stats-page {
+    background: #f3f4f6;
+    min-height: 100vh;
+    padding: 20px 30px 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* HEADER GIỐNG TRANG HÓA ĐƠN */
+.stats-page .header {
+    background: #ffffff;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.stats-page .header h1 {
+    margin: 0;
+    color: #0f766e;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.stats-page .header h2 {
+    position: absolute;
+    right: 35px;
+    top: 22px;
+    margin: 0;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* 4 Ô THỐNG KÊ */
+.stats-page .stats-card-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 0 auto 30px;
+}
+
+.stats-page .stats-card {
+    width: 130px;
+    height: 75px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.22);
+}
+
+.stats-page .stats-card p {
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.stats-page .stats-card b {
+    display: block;
+    margin-top: 10px;
+    color: #000;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.stats-page .stats-card.blue {
+    background: #e8f2ff;
+}
+
+.stats-page .stats-card.green {
+    background: #d8f9df;
+}
+
+.stats-page .stats-card.yellow {
+    background: #fff3bf;
+}
+
+.stats-page .stats-card.pink {
+    background: #fce4f1;
+}
+
+/* KHỐI BIỂU ĐỒ + DANH MỤC */
+.stats-page .stats-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+    margin: 0 auto;
+}
+
+/* BIỂU ĐỒ CỘT */
+.stats-page .stats-chart-box {
+    width: 600px;
+    height: 300px;
+    background: #ffffff;
+    border: 1px solid #8ed3cf;
+    box-sizing: border-box;
+}
+
+.stats-page .stats-chart-box h3 {
+    margin: 12px 0 18px;
+    text-align: center;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.stats-page .stats-chart-box .bar-chart,
+.stats-page .stats-chart-box .month-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 0;
+    padding: 0 22px;
+}
+
+.stats-page .stats-chart-box .bar-chart {
+    height: 200px;
+    align-items: end;
+}
+
+.stats-page .stats-chart-box .month-row {
+    padding-top: 12px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.stats-page .stats-chart-box .bar {
+    width: 22px;
+    background: #14b8a6;
+    justify-self: center;
+}
+/* KHUNG DANH MỤC */
+.stats-page .stats-category-box {
+    width: 280px;
+    height: 300px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+}
+
+.stats-page .stats-category-box h3 {
+    margin: 15px;
+    color: #0f766e;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.stats-page .stats-category-box .legend {
+    padding: 0 18px;
+}
+
+.stats-page .stats-category-box .legend p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.stats-page .stats-category-box .legend b {
+    margin-left: auto;
+    color: #000;
+    font-weight: 800;
+}
+
+.stats-page .stats-category-box .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.stats-page .do-uong {
+    background: #00b020;
+}
+
+.stats-page .banh-keo {
+    background: #f59e0b;
+}
+
+.stats-page .mi-goi {
+    background: #0066cc;
+}
+
+.stats-page .gia-vi {
+    background: #ef4444;
+}
+
+.stats-page .khac {
+    background: #a855f7;
+}
+
+/* TỔNG DOANH THU */
+.stats-page .stats-total {
+    width: 900px;
+    margin: 15px auto 0;
+    text-align: right;
+    color: #0f766e;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* FOOTER */
+.stats-page footer {
+    margin-top: 120px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+/* CHỐNG CSS CŨ GHI ĐÈ */
+.stats-page .stat-cards,
+.stats-page .card,
+.stats-page .bar-box,
+.stats-page .pie-box,
+.stats-page .chart-row,
+.stats-page .total {
+    all: unset;
+}
+/* ÉP KÍCH THƯỚC TIÊU ĐỀ THỐNG KÊ */
+
+.stats-page .header h1,
+.stats-page h1 {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0;
+}

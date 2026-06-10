@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý thống kê</title>
+    <link rel="stylesheet" href="css/style.css?v=1000">
+</head>
+
+<body>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Trang chủ</a></li>
+            <li><a href="sanpham.html">📦 Sản phẩm</a></li>
+            <li><a href="khachhang.html">👥 Khách hàng</a></li>
+            <li><a href="nhacungcap.html">🚚 Nhà cung cấp</a></li>
+            <li><a href="nhanvien.html">👨‍💼 Nhân viên</a></li>
+            <li><a href="donhang.html">🛒 Đơn hàng</a></li>
+            <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
+            <li class="active"><a href="thongke.html">📈 Thống kê</a></li>
+            <li><a href="#">🚪 Đăng xuất</a></li>
+        </ul>
+    </div>
+
+    <div class="main order-page stats-page">
+        <div class="header">
+            <h1>QUẢN LÝ THỐNG KÊ</h1>
+            <h2>👤 Admin</h2>
+        </div>
+
+        <div class="stats-card-row">
+            <div class="stats-card blue">
+                <p>📋 Đơn hàng</p>
+                <b id="tongDonHang">3</b>
+            </div>
+
+            <div class="stats-card green">
+                <p>👥 Khách hàng</p>
+                <b id="tongKhachHang">3</b>
+            </div>
+
+            <div class="stats-card yellow">
+                <p>📦 Sản phẩm</p>
+                <b id="tongSanPham">4</b>
+            </div>
+
+            <div class="stats-card pink">
+                <p>💰 Doanh thu</p>
+                <b id="tongDoanhThu">880.000đ</b>
+            </div>
+        </div>
+
+        <div class="stats-content">
+            <div class="stats-chart-box">
+                <h3>Biểu đồ doanh thu theo tháng</h3>
+
+                <div class="bar-chart">
+                    <div class="bar" style="height:30px"></div>
+                    <div class="bar" style="height:48px"></div>
+                    <div class="bar" style="height:60px"></div>
+                    <div class="bar" style="height:78px"></div>
+                    <div class="bar" style="height:98px"></div>
+                    <div class="bar" style="height:118px"></div>
+                    <div class="bar" style="height:105px"></div>
+                    <div class="bar" style="height:125px"></div>
+                    <div class="bar" style="height:145px"></div>
+                    <div class="bar" style="height:110px"></div>
+                    <div class="bar" style="height:155px"></div>
+                    <div class="bar" style="height:168px"></div>
+                </div>
+
+                <div class="month-row">
+                    <span>T1</span><span>T2</span><span>T3</span><span>T4</span>
+                    <span>T5</span><span>T6</span><span>T7</span><span>T8</span>
+                    <span>T9</span><span>T10</span><span>T11</span><span>T12</span>
+                </div>
+            </div>
+
+            <div class="stats-category-box">
+                <h3>Tỷ lệ doanh thu theo danh mục</h3>
+
+                <div class="legend">
+                    <p><span class="dot do-uong"></span>Đồ uống <b>35%</b></p>
+                    <p><span class="dot banh-keo"></span>Bánh kẹo <b>25%</b></p>
+                    <p><span class="dot mi-goi"></span>Mì gói <b>20%</b></p>
+                    <p><span class="dot gia-vi"></span>Gia vị <b>12%</b></p>
+                    <p><span class="dot khac"></span>Khác <b>8%</b></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="stats-total" id="tongDoanhThuNam">
+            Tổng doanh thu năm: 880.000đ
+        </h3>
+
+        <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
+    </div>
+</div>
+
+<script src="js/thongke.js?v=1000"></script>
+</body>
+</html>
