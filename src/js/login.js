@@ -3,11 +3,10 @@ function dangNhap() {
     const password = document.getElementById("password").value.trim();
 
     if (username === "" || password === "") {
-        alert("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!");
+        alert("Vui lòng nhập đầy đủ thông tin!");
         return;
     }
 
-    localStorage.setItem("isLogin", "true");
     localStorage.setItem("username", username);
 
     window.location.href = "index.html";

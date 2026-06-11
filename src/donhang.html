@@ -18,10 +18,8 @@
             <li class="active"><a href="donhang.html">🛒 Đơn hàng</a></li>
             <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
             <li><a href="thongke.html">📈 Thống kê</a></li>
-            <li>
-                 <a href="#" onclick="dangXuat()">
-                🚪 Đăng xuất
-                </a>
+           <li>
+                <a href="#" onclick="moPopupDangXuat()">🚪 Đăng xuất</a>
             </li>
         </ul>
     </div>
@@ -29,7 +27,7 @@
     <div class="main order-page">
         <div class="header">
             <h1>QUẢN LÝ ĐƠN HÀNG</h1>
-            <h2>👤 Admin</h2>
+            <h2>👤 <span id="adminName">Admin</span></h2>
         </div>
 
         <div class="order-action-row">
@@ -104,6 +102,20 @@
         <button class="detail-close-btn" onclick="dongChiTietDonHang()">Đóng</button>
     </div>
 </div>
+<div id="logoutModal" class="logout-modal">
+    <div class="logout-box">
+        <h2>⚠️ XÁC NHẬN ĐĂNG XUẤT</h2>
+
+        <p>Bạn có muốn đăng xuất<br>khỏi hệ thống không?</p>
+
+        <div class="logout-actions">
+            <button class="cancel-btn" onclick="dongPopupDangXuat()">HỦY</button>
+            <button class="logout-btn" onclick="xacNhanDangXuat()">ĐĂNG XUẤT</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js?v=9999"></script>
 <script src="js/donhang.js?v=500"></script>
 <script src="js/login.js"></script>
 </body>

@@ -19,9 +19,7 @@
             <li><a href="hoadon.html">🧾 Hóa đơn</a></li>
             <li class="active"><a href="thongke.html">📈 Thống kê</a></li>
             <li>
-                <a href="#" onclick="dangXuat()">
-                    🚪 Đăng xuất
-                </a>
+                <a href="#" onclick="moPopupDangXuat()">🚪 Đăng xuất</a>
             </li>
         </ul>
     </div>
@@ -29,7 +27,7 @@
     <div class="main order-page stats-page">
         <div class="header">
             <h1>QUẢN LÝ THỐNG KÊ</h1>
-            <h2>👤 Admin</h2>
+            <h2>👤 <span id="adminName">Admin</span></h2>
         </div>
 
         <div class="stats-card-row">
@@ -100,7 +98,19 @@
         <footer>© 2026 Hệ thống quản lý cửa hàng tạp hóa</footer>
     </div>
 </div>
+<div id="logoutModal" class="logout-modal">
+    <div class="logout-box">
+        <h2>⚠️ XÁC NHẬN ĐĂNG XUẤT</h2>
 
+        <p>Bạn có muốn đăng xuất<br>khỏi hệ thống không?</p>
+
+        <div class="logout-actions">
+            <button class="cancel-btn" onclick="dongPopupDangXuat()">HỦY</button>
+            <button class="logout-btn" onclick="xacNhanDangXuat()">ĐĂNG XUẤT</button>
+        </div>
+    </div>
+</div>
+<script src="js/script.js?v=9999"></script>
 <script src="js/thongke.js?v=1000"></script>
 <script src="js/login.js"></script>
 </body>

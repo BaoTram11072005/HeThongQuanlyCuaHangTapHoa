@@ -632,3 +632,22 @@ function xacNhanDangXuat() {
     localStorage.removeItem("username");
     window.location.href = "login.html";
 }
+window.onload = function () {
+    const username = localStorage.getItem("username");
+
+    if (username) {
+        const adminName = document.getElementById("adminName");
+
+        if (adminName) {
+            adminName.innerText = username;
+        }
+    }
+};
+document.addEventListener("DOMContentLoaded", function () {
+    const username = localStorage.getItem("username");
+    const adminName = document.getElementById("adminName");
+
+    if (adminName && username) {
+        adminName.innerText = username;
+    }
+});
