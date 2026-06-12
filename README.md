@@ -186,7 +186,28 @@ database/ERD.png
 ![Thống kê](figma/thongke.png)
 ## Cấu trúc thư mục dự án
 
+## Liên kết Figma
+
+Thiết kế giao diện hệ thống quản lý cửa hàng tạp hóa:
+
+https://www.figma.com/design/YzkLVdqdBR0p2O3oTi6B9j/H%E1%BB%87-th%E1%BB%91ng-qu%E1%BA%A3n-l%C3%BD-c%E1%BB%ADa-h%C3%A0ng-t%E1%BA%A1p-h%C3%B3a?node-id=0-1&t=izB0yLwIXIKXGC07-1
 ```text
+
+## Tài liệu phân tích hệ thống
+
+### DFD mức ngữ cảnh
+
+![DFD Ngữ Cảnh](database/DFD_NguCanh.png)
+
+### DFD mức 1
+
+![DFD Mức 1](database/DFD_Muc1.png)
+
+### ERD
+
+![ERD](database/ERD.png)
+
+
 HETHONGQUANLYCUAHANGTAPHOA
 │
 ├── database
