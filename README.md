@@ -147,7 +147,43 @@ database/ERD.png
 ```
 
 ---
+## Giao diện Figma
 
+### Trang đăng nhập
+
+![Login](figma/login.png)
+
+### Trang chủ
+
+![Trang chủ](figma/trangchu.png)
+
+### Quản lý sản phẩm
+
+![Sản phẩm](figma/sanpham.png)
+
+### Quản lý khách hàng
+
+![Khách hàng](figma/khachhang.png)
+
+### Quản lý nhà cung cấp
+
+![Nhà cung cấp](figma/nhacungcap.png)
+
+### Quản lý nhân viên
+
+![Nhân viên](figma/nhanvien.png)
+
+### Quản lý đơn hàng
+
+![Đơn hàng](figma/donhang.png)
+
+### Quản lý hóa đơn
+
+![Hóa đơn](figma/hoadon.png)
+
+### Thống kê
+
+![Thống kê](figma/thongke.png)
 ## Cấu trúc thư mục dự án
 
 ```text
